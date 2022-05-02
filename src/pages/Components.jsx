@@ -17,6 +17,9 @@ const Components = () => {
         <Button full={false}>
           Explore services
         </Button>
+        <Button size='small'>
+          Get a free quote
+        </Button>
       </Buttons>
       <H1>H1</H1>
       <H2>H2</H2>
