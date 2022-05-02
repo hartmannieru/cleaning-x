@@ -4,8 +4,11 @@ import App from './App';
 
 import './styles/index.scss'
 import 'bootstrap/dist/js/bootstrap'
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App />
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 );
