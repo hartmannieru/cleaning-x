@@ -1,6 +1,7 @@
+import { Routes , Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import Button from "./components/Button";
-import Buttons from "./components/Buttons";
+import Components from "./pages/Components";
+import Main from "./pages/Main";
 import GlobalStyle from "./styles/GlobalStyles";
 
 const theme = {
@@ -8,6 +9,7 @@ const theme = {
     white: '#ffffff',
     black: '#211F54',
     primary: '#0075FF',
+    description: '#6E7191',
     grey: '#EFF0F6',
     transparent: 'transparent'
   }
@@ -16,19 +18,13 @@ const theme = {
 function App() {
   return (
     <>
-      <div className="container">
-        <GlobalStyle />
-        <ThemeProvider theme={theme}>
-          <Buttons>
-            <Button>
-              Get a free quote
-            </Button>
-            <Button full={false}>
-              Explore services
-            </Button>
-          </Buttons>
-        </ThemeProvider>
-      </div>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/components" element={<Components />} />
+       </Routes>
+      </ThemeProvider>
     </>
   );
 }

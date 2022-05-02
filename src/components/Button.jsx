@@ -20,12 +20,24 @@ const ButtonContainer = styled.button`
   border-style: solid;
   border-color: ${props => props.full ? 'transparent' : props.theme.color.grey};
   border-radius: ${rem(14)};
-  font-size: ${rem(16)};
+  font-size: ${props => props.size === 'large' ? `${rem(18)}` : `${rem(16)}`};
   line-height: ${rem(20)};
-  font-weight: ${props => props.full ? 700 : 400};
+  ${
+    props => {
+      if (props.full && props.size !== 'small') {
+        return `
+          font-weight: 700;
+        `
+      } else {
+        return `
+          font-weight: 400;
+        `
+      }
+    }
+  }
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  padding: ${rem(26)} ${rem(38)};
+  padding: ${props => props.size === 'large' ? `${rem(26)} ${rem(38)}` : `${rem(17)} ${rem(24)}`};
   min-width: ${rem(217)};
   box-shadow: ${props => props.full ? 'none' : '0px 4px 10px rgba(20, 20, 43, 0.04)'};
   transition: all 0.3s linear;
@@ -35,6 +47,7 @@ const ButtonContainer = styled.button`
     background: #0069E4;
     box-shadow: none;
     transition: background 200ms linear;
+    font-weight: ${props => props.size === 'large' ? 700 : 400};
   }
 `
 

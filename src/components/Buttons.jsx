@@ -12,6 +12,7 @@ const Buttons = ({children}) => {
 
 const ButtonsContainer = styled.div`
   display: flex;
+  align-items: flex-start;
   gap: ${rem(28)};
 `
 
