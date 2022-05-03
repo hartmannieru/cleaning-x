@@ -15,7 +15,6 @@ const LogoContainer = styled.a`
   display: flex;
   text-align: center;
   width: ${rem(178)};
-  margin: ${rem(40)} 0;
 `
 
 const LogoImg = styled.img`
