@@ -1,4 +1,5 @@
 import React from 'react'
+import { Col, Container, Row } from 'react-bootstrap';
 import Button from "../components/Button";
 import Buttons from "../components/Buttons";
 import CardArticle from '../components/CardArticle';
@@ -14,14 +15,14 @@ import Logo from '../components/Logo';
 
 const Components = () => {
   return (
-    <div className="container">
-      <div className='row my-5'>
-        <div className='col-12'>
+    <Container>
+      <Row className='my-5'>
+        <Col>
           <Logo />
-        </div>
-      </div>
-      <div className='row my-5'>
-        <div className='col-12'>
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col>
           <Buttons>
             <Button>
               Get a free quote
@@ -33,54 +34,54 @@ const Components = () => {
               Get a free quote
             </Button>
           </Buttons>
-        </div>
-      </div>
-      <div className='row my-5'>
-        <div className='col-12'>
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col>
           <H1>H1</H1>
-        </div>
-      </div>
-      <div className='row my-5'>
-        <div className='col-12'>
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col>
           <H2>H2</H2>
-        </div>
-      </div>
-      <div className='row my-5'>
-        <div className='col-12'>
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col>
           <H3>H3</H3>
-        </div>
-      </div>
-      <div className='row my-5'>
-        <div className='col-12'>
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col>
           <H4>H4</H4>
-        </div>
-      </div>
-      <div className='row my-5'>
-        <div className='col-12'>
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col>
           <Description>Description</Description>
-        </div>
-      </div>
-      <div className='row my-5'>
-        <div className='col-12'>
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col>
           <Icons />
-        </div>
-      </div>
-      <div className='row my-5'>
-        <div className='col-4'>
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col lg={4}>
           <CardWorks />
-        </div>
-      </div>
-      <div className='row my-5'>
-        <div className='col-4'>
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col lg={4}>
           <CardProfessional />
-        </div>
-      </div>
-      <div className='row my-5'>
-        <div className='col-6'>
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col lg={6}>
           <CardArticle />
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

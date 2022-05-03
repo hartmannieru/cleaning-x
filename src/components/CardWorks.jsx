@@ -19,9 +19,7 @@ const CardWorks = () => {
   )
 }
 
-const CardWorksContainer = styled.article`
-  max-width: ${rem(430)};
-`
+const CardWorksContainer = styled.article``
 
 const CardWorksImgContainer = styled.div`
   display: flex;
