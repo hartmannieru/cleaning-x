@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { rem } from 'polished'
 import Icon1 from '../images/icons/icon-1.svg'
 
+// TODO:переименовать компонент и имя файла в Icon
 const Icons = () => {
   return (
     <IconsContainer>
