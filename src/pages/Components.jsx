@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from "../components/Button";
 import Buttons from "../components/Buttons";
+import CardArticle from '../components/CardArticle';
 import CardProfessional from '../components/CardProfessional';
 import CardWorks from '../components/CardWorks';
 import Description from '../components/Description';
@@ -66,6 +67,11 @@ const Components = () => {
       <div className='row my-5'>
         <div className='col-4'>
           <CardProfessional />
+        </div>
+      </div>
+      <div className='row my-5'>
+        <div className='col-6'>
+          <CardArticle />
         </div>
       </div>
     </div>
