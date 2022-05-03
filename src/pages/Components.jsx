@@ -9,6 +9,7 @@ import H1 from "../components/H1";
 import H2 from "../components/H2";
 import H3 from '../components/H3';
 import H4 from '../components/H4';
+import Icons from '../components/Icons';
 import Logo from '../components/Logo';
 
 const Components = () => {
@@ -57,6 +58,11 @@ const Components = () => {
       <div className='row my-5'>
         <div className='col-12'>
           <Description>Description</Description>
+        </div>
+      </div>
+      <div className='row my-5'>
+        <div className='col-12'>
+          <Icons />
         </div>
       </div>
       <div className='row my-5'>

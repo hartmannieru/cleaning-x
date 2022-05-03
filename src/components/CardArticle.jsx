@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { rem } from 'polished'
 import H4 from './H4'
 import Description from './Description'
@@ -17,6 +17,7 @@ const CardArticle = () => {
           <H4 mb={17}>8 best vacuum cleaners to clean any mess for your home in 2022</H4>
           <Description>Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port titor sit males.</Description>
           <CardArticleTextFooter>
+            {/* FIXME: сделать отдельный time компонент */}
             <H5><Time datetime="2022-01-28">Jan 28, 2022</Time></H5>
             <CardArticleTextLink href='#'>
               &#128064;
