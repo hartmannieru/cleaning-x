@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { rem } from 'polished'
 import LogoImgSrc from '../images/logo.svg'
 
+// TODO: сделать ссылкой на главную
 const Logo = () => {
   return (
     <LogoContainer href="#">
