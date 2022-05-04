@@ -12,6 +12,8 @@ import H3 from '../components/H3';
 import H4 from '../components/H4';
 import Icons from '../components/Icons';
 import Logo from '../components/Logo';
+import Menu from '../components/Menu';
+import Nav from '../components/Nav';
 
 const Components = () => {
   return (
@@ -19,6 +21,11 @@ const Components = () => {
       <Row className='my-5'>
         <Col>
           <Logo />
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col>
+          <Menu />
         </Col>
       </Row>
       <Row className='my-5'>

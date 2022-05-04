@@ -27,6 +27,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
   button {
     outline: none;
     border: none;
