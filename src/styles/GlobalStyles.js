@@ -33,6 +33,10 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   button {
     outline: none;
     border: none;

@@ -20,16 +20,7 @@ const Components = () => {
     <Container>
       <Row className='my-5'>
         <Col>
-          <Logo />
-        </Col>
-      </Row>
-      <Row className='my-5'>
-        <Col>
-          <Menu />
-        </Col>
-      </Row>
-      <Row className='my-5'>
-        <Col>
+          {/* TODO: сделать по Bootstrap */}
           <Buttons>
             <Button>
               Get a free quote
@@ -37,10 +28,29 @@ const Components = () => {
             <Button full={false}>
               Explore services
             </Button>
-            <Button size='small'>
-              Get a free quote
-            </Button>
           </Buttons>
+        </Col>
+      </Row>
+      <Row>
+        <Col lg={2} className='my-5'>
+          <Button size='small'>
+            Get a free quote
+          </Button>
+        </Col>
+        <Col lg={2} className='my-5'>
+          <Button size='small' full={false}>
+            Get a free quote
+          </Button>
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col>
+          <Logo />
+        </Col>
+      </Row>
+      <Row className='my-5'>
+        <Col>
+          <Menu />
         </Col>
       </Row>
       <Row className='my-5'>

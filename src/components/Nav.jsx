@@ -15,7 +15,7 @@ const Nav = () => {
           <Col xs sm={6} lg={3} xl={2}>
             <Logo />
           </Col>
-          <Col xl={6} lg={5} className='d-none d-lg-block'>
+          <Col lg={5} xl={6} className='d-none d-lg-block'>
             <Menu />
           </Col>
           <Col xs={1} md={2} lg={1} xl={1} className='d-none d-md-block'>

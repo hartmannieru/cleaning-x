@@ -3,12 +3,12 @@ import { Container } from 'react-bootstrap'
 import Nav from '../components/Nav'
 
 
-const Main = () => {
+const Home = () => {
   return (
-    <>
-      <Nav />
-    </>
+    <Container>
+      Home
+    </Container>
   )
 }
 
-export default Main
+export default Home
