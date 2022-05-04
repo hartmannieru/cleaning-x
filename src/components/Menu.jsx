@@ -1,33 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
+import { Link } from 'react-router-dom'
 
 const Menu = () => {
   return (
     <MenuContainer>
       <MenuItem>
-        <MenuLink>
-          Home
-        </MenuLink>
+        <MenuLink to="/">Home</MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink>
+        <MenuLink to='/about'>
           About
         </MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink>
+        <MenuLink to='/services'>
           Services
         </MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink>
+        <MenuLink to='/pages'>
           Pages
         </MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink>
-          Contact
+        <MenuLink to='/components'>
+          Components
         </MenuLink>
       </MenuItem>
     </MenuContainer>
@@ -45,6 +44,11 @@ const MenuItem = styled.li`
   }
 `
 
-const MenuLink = styled.a``
+const MenuLink = styled(Link)`
+  font-weight: 400;
+  font-size: ${rem(18)};
+  line-height: 167%;
+  color: ${props => props.theme.color.black};
+`
 
 export default Menu

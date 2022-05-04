@@ -1,7 +1,11 @@
 import { Routes , Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+import Nav from "./components/Nav";
+import About from "./pages/About";
 import Components from "./pages/Components";
-import Main from "./pages/Main";
+import Home from "./pages/Home";
+import Pages from "./pages/Pages";
+import Services from "./pages/Services";
 import GlobalStyle from "./styles/GlobalStyles";
 
 const theme = {
@@ -20,8 +24,12 @@ function App() {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <Nav />
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/pages" element={<Pages />} />
+          <Route path="/about" element={<About />} />
           <Route path="/components" element={<Components />} />
        </Routes>
       </ThemeProvider>
