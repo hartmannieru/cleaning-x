@@ -1,21 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
-import Icon1 from '../images/icons/icon-1.svg'
 
 // TODO:переименовать компонент и имя файла в Icon
-const Icons = () => {
+const Icons = ({img = '../images/icons/icon-1.svg', title = 'clients', description = '3,480+', tel = false}) => {
   return (
     <IconsContainer>
       <IconsIconContainer>
-        <IconsIcon src={Icon1} alt='Icon' />
+        <IconsIcon src={img.default} alt='Icon' />
       </IconsIconContainer>
       <IconsTextContainer>
         <IconsTitle>
-          Clients
+          {title}
         </IconsTitle>
         <IconsDescription>
-          3,480+
+          {tel ? 
+            <IconsLink href={tel} rel="noopener noreferrer">
+              {description}
+            </IconsLink>
+            : 
+            (
+              (description) 
+            )
+          }
         </IconsDescription>
       </IconsTextContainer>
     </IconsContainer>
@@ -55,6 +62,13 @@ const IconsTitle = styled.h5`
 `
 
 const IconsDescription = styled.h3`
+  font-weight: 700;
+  font-size: ${rem(28)};
+  line-height: 129%;
+  color: ${props => props.theme.color.black};
+`
+// TODO: разобраться как наследовать от h3
+const IconsLink = styled.a`
   font-weight: 700;
   font-size: ${rem(28)};
   line-height: 129%;
