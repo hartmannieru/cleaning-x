@@ -1,12 +1,14 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import Nav from '../components/Nav'
+import Header from '../components/Header'
+import ServiceWorks from '../components/ServiceWorks'
 
 
 const Home = () => {
   return (
     <Container>
-      Home
+      <Header />
+      <ServiceWorks />
     </Container>
   )
 }
