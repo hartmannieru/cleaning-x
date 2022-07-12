@@ -1,10 +1,8 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
+import React from 'react';
+import Container from '../components/Container';
 
 const Services = () => {
-  return (
-    <Container>Services</Container>
-  )
-}
+  return <Container>Services</Container>;
+};
 
-export default Services
+export default Services;

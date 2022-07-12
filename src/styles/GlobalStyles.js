@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 import RobotoRegularWoff from '../fonts/RobotoRegular.woff';
 import RobotoRegularWoff2 from '../fonts/RobotoRegular.woff2';
 import RobotoBoldWoff from '../fonts/RobotoBold.woff';
@@ -16,6 +16,14 @@ const GlobalStyle = createGlobalStyle`
     src: url(${RobotoBoldWoff}) format('woff'), url(${RobotoBoldWoff2}) format('woff2');
     font-weight: 700;
     font-style: normal;
+  }
+
+  html {
+    font-size: 16px;
+    // TODO: в переменную 
+    @media (max-width: 542px) {
+      font-size: 12px;
+    }
   }
 
   body {
@@ -42,6 +50,6 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     border: none;
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
