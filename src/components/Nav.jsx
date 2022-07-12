@@ -1,35 +1,49 @@
-import React from 'react'
-import styled from 'styled-components'
-import { rem } from 'polished'
-import Logo from './Logo'
-import Menu from './Menu'
-import CartCount from './CartCount'
-import Button from './Button'
-import { Col, Container, Row } from 'react-bootstrap'
+import React from 'react';
+import styled from 'styled-components';
+import { rem } from 'polished';
+import Logo from './Logo';
+import Menu from './Menu';
+import CartCount from './CartCount';
+import Button from './Button';
+import Container from './Container';
 
 const Nav = () => {
   return (
-    <NavContainer className='py-7'>
+    <NavBox>
       <Container>
-        <Row className='align-items-center d-flex justify-content-between'>
-          <Col xs sm={6} lg={3} xl={2}>
-            <Logo />
-          </Col>
-          <Col lg={5} xl={6} className='d-none d-lg-block'>
+        <NavBoxInner>
+          <NavLeft>
+            <Logo mr={42} />
             <Menu />
-          </Col>
-          <Col xs={1} md={2} lg={1} xl={1} className='d-none d-md-block'>
-            <CartCount />
-          </Col>
-          <Col xs sm={5} md={4} lg={3} xl={2} className="text-end">
-            <Button size='small'>Get a free quote</Button>
-          </Col>
-        </Row>
+          </NavLeft>
+          <NavRight>
+            <CartCount mr={24} />
+            <Button size="small">Get a free quote</Button>
+          </NavRight>
+        </NavBoxInner>
       </Container>
-    </NavContainer>
-  )
-}
+    </NavBox>
+  );
+};
 
-const NavContainer = styled.nav``
+const NavBox = styled.nav`
+  padding: ${rem(32)} 0;
+`;
 
-export default Nav
+const NavBoxInner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const NavLeft = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const NavRight = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export default Nav;

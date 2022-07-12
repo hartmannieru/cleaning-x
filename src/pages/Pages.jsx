@@ -1,10 +1,8 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
+import React from 'react';
+import Container from '../components/Container';
 
 const Pages = () => {
-  return (
-    <Container>Pages</Container>
-  )
-}
+  return <Container>Pages</Container>;
+};
 
-export default Pages
+export default Pages;

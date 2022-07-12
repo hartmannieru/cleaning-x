@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import { rem } from 'polished'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import styled from 'styled-components';
+import { rem } from 'polished';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   return (
@@ -10,45 +10,39 @@ const Menu = () => {
         <MenuLink to="/">Home</MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink to='/about'>
-          About
-        </MenuLink>
+        <MenuLink to="/about">About</MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink to='/services'>
-          Services
-        </MenuLink>
+        <MenuLink to="/services">Services</MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink to='/pages'>
-          Pages
-        </MenuLink>
+        <MenuLink to="/pages">Pages</MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink to='/components'>
-          Components
-        </MenuLink>
+        <MenuLink to="/components">Components</MenuLink>
       </MenuItem>
     </MenuContainer>
-  )
-}
+  );
+};
 
 const MenuContainer = styled.ul`
   display: flex;
-`
+  @media (max-width: 973px) {
+    display: none;
+  }
+`;
 
 const MenuItem = styled.li`
   margin-right: ${rem(22)};
   &:last-child {
     margin-right: 0;
   }
-`
+`;
 
 const MenuLink = styled(Link)`
   font-weight: 400;
   font-size: ${rem(18)};
-  line-height: 167%;
-  color: ${props => props.theme.color.black};
-`
+  color: ${(props) => props.theme.color.black};
+`;
 
-export default Menu
+export default Menu;
