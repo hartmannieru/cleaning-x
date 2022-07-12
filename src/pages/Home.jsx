@@ -5,10 +5,10 @@ import ServiceWorks from '../components/ServiceWorks';
 
 const Home = () => {
   return (
-    <Container>
-      {/* <Header /> */}
+    <>
+      <Header />
       {/* <ServiceWorks /> */}
-    </Container>
+    </>
   );
 };
 

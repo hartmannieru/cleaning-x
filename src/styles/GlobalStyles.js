@@ -18,6 +18,12 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
   }
 
+  *,
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+
   html {
     font-size: 16px;
     // TODO: в переменную 
