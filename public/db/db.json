@@ -1,0 +1,22 @@
+{
+  "serviceWorks": [
+    {
+      "id": 1,
+      "img": "images/works/item-1.svg",
+      "title": "Schedule online",
+      "description": "Sagittis nibh scelerisque vitae egetolment vulputate sem elementum sedn."
+    },
+    {
+      "id": 2,
+      "img": "../images/works/item-2.svg",
+      "title": "Pay online easily",
+      "description": "Vitae ut accumsan blandit ullamcorperolm suscipit dui gravida amet at nunc."
+    },
+    {
+      "id": 3,
+      "img": "../images/works/item-3.svg",
+      "title": "Get your house cleaned",
+      "description": "Nunc maecenas sollicitudin metus tellus mattis sed porttitor cursus eleifend."
+    }
+  ]
+}
