@@ -44,14 +44,13 @@ const Header = () => {
 
 const HeaderBox = styled.header`
   min-height: ${rem(734)};
-  margin-bottom: ${rem(240)};
+  margin-bottom: ${rem(235)};
 `;
 
 const HeaderBoxInner = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(${rem(400)}, auto));
   align-items: center;
-  gap: ${rem(30)};
 `;
 
 const HeaderContentBox = styled.div`
@@ -82,7 +81,7 @@ const HeaderImgBox = styled.div`
 `;
 
 const HeaderImgInner = styled.img`
-  @media (max-width: 890px) {
+  @media (max-width: 800px) {
     width: 100%;
   }
 `;

@@ -8,9 +8,10 @@ const Container = ({ children }) => {
 
 const ContainerBox = styled.div`
   max-width: ${rem(1220)};
+  width: 100%;
   padding: 0 ${rem(30)};
   margin: 0 auto;
-  overflow: hidden;
+  box-sizing: content-box;
 `;
 
 export default Container;
