@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'src/components/Container';
+import ServiceCleaning from 'src/components/ServiceCleaning';
 import Header from '../components/Header';
 import ServiceWorks from '../components/ServiceWorks';
 
@@ -9,6 +10,7 @@ const Home = () => {
     <>
       <Header />
       <ServiceWorks />
+      <ServiceCleaning />
     </>
   );
 };

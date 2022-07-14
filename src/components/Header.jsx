@@ -4,8 +4,7 @@ import { rem } from 'polished';
 import H1 from './H1';
 import Description from './Description';
 import Button from './Button';
-import Icons from './Icons';
-import HeaderImg from '../images/header/header-img.svg';
+import Icon from './Icon';
 import Container from './Container';
 
 const Header = () => {
@@ -25,8 +24,8 @@ const Header = () => {
             </Description>
             <HeaderAction>
               <Button>Get a free quote</Button>
-              <Icons
-                img={require('../images/icons/icon-2.svg')}
+              <Icon
+                img={'images/icons/icon-2.svg'}
                 title="Call us now"
                 description="(414) 567 - 2109"
                 tel="tel:4145672109"
@@ -34,7 +33,7 @@ const Header = () => {
             </HeaderAction>
           </HeaderContentBox>
           <HeaderImgBox>
-            <HeaderImgInner src={HeaderImg} alt="header-img" />
+            <HeaderImgInner src={'/images/header/header-img.svg'} alt="header-img" />
           </HeaderImgBox>
         </HeaderBoxInner>
       </Container>

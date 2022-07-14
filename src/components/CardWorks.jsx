@@ -4,9 +4,15 @@ import { rem } from 'polished';
 import H3 from './H3';
 import Description from './Description';
 
-const CardWorks = ({ id, img, title, description }) => {
+const CardWorks = ({
+  id = 1,
+  img = 'images/works/item-1.svg',
+  title = 'Schedule online',
+  description = 'Vitae ut accumsan blandit ullamcorperolm suscipit dui gravida amet at nunc.',
+  page,
+}) => {
   return (
-    <CardWorksContainer>
+    <CardWorksContainer page={page}>
       <CardWorksImgContainer>
         <CardWorksImg src={img} />
       </CardWorksImgContainer>
@@ -18,7 +24,10 @@ const CardWorks = ({ id, img, title, description }) => {
   );
 };
 
-const CardWorksContainer = styled.article``;
+const CardWorksContainer = styled.article`
+  max-width: ${(props) => (props.page === 'components' ? rem(374) : 'auto')};
+  width: 100%;
+`;
 
 const CardWorksImgContainer = styled.div`
   display: flex;

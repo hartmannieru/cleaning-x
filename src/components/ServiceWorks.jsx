@@ -7,6 +7,9 @@ import Description from './Description';
 import Container from './Container';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Hr from './Hr';
+import Buttons from './Buttons';
+import Button from './Button';
 
 const ServiceWorks = () => {
   const [cardsArr, setCardsArr] = useState([]);
@@ -33,6 +36,11 @@ const ServiceWorks = () => {
             <CardWorks key={id} id={id} img={img} title={title} description={description} />
           ))}
         </ServiceWorksCards>
+        <Buttons mb={240}>
+          <Button>Get a free quote</Button>
+          <Button full={false}>Explore services</Button>
+        </Buttons>
+        <Hr />
       </Container>
     </ServiceWorksContainer>
   );
@@ -40,7 +48,7 @@ const ServiceWorks = () => {
 
 const ServiceWorksContainer = styled.section``;
 const ServiceWorksCards = styled.section`
-  margin-bottom: ${rem(56)};
+  margin-bottom: ${rem(29)};
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(${rem(374)}, auto));
   gap: ${rem(30)};

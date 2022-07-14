@@ -18,9 +18,9 @@ const Menu = () => {
       <MenuItem>
         <MenuLink to="/pages">Pages</MenuLink>
       </MenuItem>
-      {/* <MenuItem>
+      <MenuItem>
         <MenuLink to="/components">Components</MenuLink>
-      </MenuItem> */}
+      </MenuItem>
     </MenuContainer>
   );
 };
