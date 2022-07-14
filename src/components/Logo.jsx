@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
-import LogoImgSrc from '../images/logo.svg';
 import { Link } from 'react-router-dom';
 
 const Logo = ({ mr }) => {
   return (
     <LogoContainer to={'/'} mr={mr}>
-      <LogoImg src={LogoImgSrc} alt="Logo" />
+      <LogoImg src={'/images/logo.svg'} alt="Logo" />
     </LogoContainer>
   );
 };

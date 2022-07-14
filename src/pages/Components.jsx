@@ -12,91 +12,69 @@ import H4 from '../components/H4';
 import Icons from '../components/Icons';
 import Logo from '../components/Logo';
 import Menu from '../components/Menu';
-import Container from '../components/Container';
 import styled from 'styled-components';
 import { rem } from 'polished';
+import Container from 'src/components/Container';
 
 const Components = () => {
   return (
     <Container>
-      <Row className="my-5">
-        <Col>
-          <Buttons>
-            <Button>Get a free quote</Button>
-            <Button full={false}>Explore services</Button>
-          </Buttons>
-        </Col>
-      </Row>
-      <Row>
-        <Col lg={2} className="my-5">
-          <Button size="small">Get a free quote</Button>
-        </Col>
-        <Col lg={2} className="my-5">
-          <Button size="small" full={false}>
-            Get a free quote
-          </Button>
-        </Col>
-      </Row>
-      <Row className="my-5">
-        <Col>
-          <Logo />
-        </Col>
-      </Row>
-      <Row className="my-5">
-        <Col>
-          <Menu />
-        </Col>
-      </Row>
-      <Row className="my-5">
-        <Col>
-          <H1>H1</H1>
-        </Col>
-      </Row>
-      <Row className="my-5">
-        <Col>
-          <H2>H2</H2>
-        </Col>
-      </Row>
-      <Row className="my-5">
-        <Col>
-          <H3>H3</H3>
-        </Col>
-      </Row>
-      <Row className="my-5">
-        <Col>
-          <H4>H4</H4>
-        </Col>
-      </Row>
-      <Row className="my-5">
-        <Col>
-          <Description>Description</Description>
-        </Col>
-      </Row>
-      <Row className="my-5">
-        <Col>
-          <Icons />
-        </Col>
-      </Row>
-      <Row className="my-5">
-        <Col lg={4}>
-          <CardWorks />
-        </Col>
-      </Row>
-      <Row className="my-5">
-        <Col lg={4}>
-          <CardProfessional />
-        </Col>
-      </Row>
-      <Row className="my-5">
-        <Col lg={6}>
-          <CardArticle />
-        </Col>
-      </Row>
+      <ComponentsRow>
+        <ComponentsLabel>Buttons</ComponentsLabel>
+        <Buttons>
+          <Button>Get a free quote</Button>
+          <Button full={false}>Explore services</Button>
+        </Buttons>
+      </ComponentsRow>
+      <ComponentsRow>
+        <ComponentsLabel>Button Small</ComponentsLabel>
+        <Button size="small">Get a free quote</Button>
+      </ComponentsRow>
+      <ComponentsRow>
+        <ComponentsLabel>Logo</ComponentsLabel>
+        <Logo />
+      </ComponentsRow>
+      <ComponentsRow>
+        <ComponentsLabel>Menu</ComponentsLabel>
+        <Menu />
+      </ComponentsRow>
+      <ComponentsRow>
+        <ComponentsLabel>Headings</ComponentsLabel>
+        <H1>H1</H1>
+        <H2>H2</H2>
+        <H3>H3</H3>
+        <H4>H4</H4>
+        <Description>Description</Description>
+      </ComponentsRow>
+      <ComponentsRow>
+        <ComponentsLabel>Icons + Text</ComponentsLabel>
+        <Icons img={'/images/icons/icon-2.svg'} />
+      </ComponentsRow>
+      <ComponentsRow>
+        <ComponentsLabel>Card Works</ComponentsLabel>
+        <CardWorks page={'components'} />
+      </ComponentsRow>
+      <ComponentsRow>
+        <ComponentsLabel>Card Professional</ComponentsLabel>
+        <CardProfessional page={'components'} />
+      </ComponentsRow>
+      <ComponentsRow>
+        <ComponentsLabel>Card Article</ComponentsLabel>
+        <CardArticle page={'components'} />
+      </ComponentsRow>
     </Container>
   );
 };
 
-const Row = styled.div``;
-const Col = styled.div``;
+const ComponentsRow = styled.div`
+  margin-bottom: ${rem(40)};
+`;
+
+const ComponentsLabel = styled.p`
+  margin-bottom: ${rem(20)};
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: ${rem(14)};
+`;
 
 export default Components;
