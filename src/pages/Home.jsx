@@ -6,10 +6,10 @@ import ServiceWorks from '../components/ServiceWorks';
 
 const Home = () => {
   return (
-    <Container>
-      {/* <Header /> */}
-      {/* <ServiceWorks /> */}
-    </Container>
+    <>
+      <Header />
+      <ServiceWorks />
+    </>
   );
 };
 
