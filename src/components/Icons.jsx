@@ -8,12 +8,12 @@ const Icons = ({ children }) => {
 
 const IconsBox = styled.div`
   width: auto;
-  display: flex;
-  justify-content: center;
-  gap: ${rem(100)};
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: ${rem(115)};
   @media (max-width: 783px) {
-    gap: ${rem(50)};
+    grid-template-columns: repeat(2, 1fr);
+    gap: ${rem(50)} ${rem(80)};
   }
 `;
 
