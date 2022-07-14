@@ -11,7 +11,7 @@ const Description = ({ children, align, mb }) => {
 };
 
 const DescriptionContainer = styled.p`
-  max-width: ${rem(648)};
+  max-width: ${rem(702)};
   width: 100%;
   font-weight: 400;
   font-size: ${rem(21)};

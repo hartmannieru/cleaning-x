@@ -4,7 +4,7 @@ import { rem } from 'polished';
 import H1 from './H1';
 import Description from './Description';
 import Button from './Button';
-import Icons from './Icons';
+import Icon from './Icon';
 import Container from './Container';
 
 const Header = () => {
@@ -24,7 +24,7 @@ const Header = () => {
             </Description>
             <HeaderAction>
               <Button>Get a free quote</Button>
-              <Icons
+              <Icon
                 img={'images/icons/icon-2.svg'}
                 title="Call us now"
                 description="(414) 567 - 2109"

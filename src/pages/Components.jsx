@@ -9,7 +9,7 @@ import H1 from '../components/H1';
 import H2 from '../components/H2';
 import H3 from '../components/H3';
 import H4 from '../components/H4';
-import Icons from '../components/Icons';
+import Icon from '../components/Icon';
 import Logo from '../components/Logo';
 import Menu from '../components/Menu';
 import styled from 'styled-components';
@@ -48,7 +48,7 @@ const Components = () => {
       </ComponentsRow>
       <ComponentsRow>
         <ComponentsLabel>Icons + Text</ComponentsLabel>
-        <Icons img={'/images/icons/icon-2.svg'} />
+        <Icon img={'/images/icons/icon-2.svg'} />
       </ComponentsRow>
       <ComponentsRow>
         <ComponentsLabel>Card Works</ComponentsLabel>
