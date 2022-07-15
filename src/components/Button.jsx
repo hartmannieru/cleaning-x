@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-const Button = ({ full = true, size = 'large', text = '', big = '', color = '' }) => {
+const Button = ({ full = true, size = 'small', text = 'Button' }) => {
   return (
-    <ButtonContainer full={full} size={size} big={big} color={color}>
+    <ButtonContainer full={full} size={size}>
       {text && <span>{text}</span>}
     </ButtonContainer>
   );
@@ -12,10 +12,9 @@ const Button = ({ full = true, size = 'large', text = '', big = '', color = '' }
 
 const ButtonContainer = styled.button`
   color: ${(props) => (props.full ? props.theme.color.white : props.theme.color.black)};
-  background: ${(props) => props.color};
-  border-width: ${rem(1)};
-  border-style: solid;
-  border-color: ${(props) => (props.full ? 'transparent' : props.theme.color.grey)};
+  background: ${(props) =>
+    props.full ? props.theme.color.primary : props.theme.color.transparent};
+  border: ${rem(1)} solid ${(props) => (props.full ? 'transparent' : props.theme.color.grey)};
   border-radius: ${rem(14)};
   font-size: ${(props) => (props.size === 'large' ? `${rem(18)}` : `${rem(16)}`)};
   line-height: ${rem(18)};
