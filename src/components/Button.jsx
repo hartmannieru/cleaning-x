@@ -2,18 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-const Button = ({ children, full = true, size = 'large' }) => {
+const Button = ({ full = true, size = 'large', text = '', big = '', color = '' }) => {
   return (
-    <ButtonContainer full={full} size={size}>
-      {children}
+    <ButtonContainer full={full} size={size} big={big} color={color}>
+      {text && <span>{text}</span>}
     </ButtonContainer>
   );
 };
 
 const ButtonContainer = styled.button`
   color: ${(props) => (props.full ? props.theme.color.white : props.theme.color.black)};
-  background: ${(props) =>
-    props.full ? props.theme.color.primary : props.theme.color.transparent};
+  background: ${(props) => props.color};
   border-width: ${rem(1)};
   border-style: solid;
   border-color: ${(props) => (props.full ? 'transparent' : props.theme.color.grey)};
