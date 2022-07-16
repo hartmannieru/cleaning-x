@@ -18,5 +18,22 @@
       "title": "Get your house cleaned",
       "description": "Nunc maecenas sollicitudin metus tellus mattis sed porttitor cursus eleifend."
     }
+  ],
+  "serviceCleaning": [
+    {
+      "icon": "images/icons/icon-1.svg",
+      "title": "clients",
+      "count": "3,480+"
+    },
+    {
+      "icon": "images/icons/icon-2.svg",
+      "title": "Jobs done",
+      "count": "12,540+"
+    },
+    {
+      "icon": "images/icons/icon-3.svg",
+      "title": "Employees",
+      "count": "100+"
+    }
   ]
 }

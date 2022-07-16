@@ -3,25 +3,25 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 
 const Icon = ({
-  img = '/images/icons/icon-2.svg',
+  icon = '/images/icons/icon-2.svg',
   title = 'clients',
-  description = '3,480+',
+  count = '3,480+',
   tel = false,
 }) => {
   return (
     <IconContainer>
       <IconIconContainer>
-        <IconIcon src={img} alt="Icon" />
+        <IconIcon src={icon} alt="Icon" />
       </IconIconContainer>
       <IconTextContainer>
         <IconTitle>{title}</IconTitle>
         <IconDescription>
           {tel ? (
             <IconLink href={tel} rel="noopener noreferrer">
-              {description}
+              {count}
             </IconLink>
           ) : (
-            description
+            count
           )}
         </IconDescription>
       </IconTextContainer>

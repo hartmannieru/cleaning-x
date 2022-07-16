@@ -6,8 +6,17 @@ import H2 from './H2';
 import Description from './Description';
 import Icons from './Icons';
 import Icon from './Icon';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const ServiceCleaning = () => {
+  const [icons, setIcons] = useState([]);
+
+  useEffect(() => {
+    fetch('db/db.json')
+      .then((response) => response.json())
+      .then((json) => setIcons(json['serviceCleaning']));
+  }, []);
   return (
     <ServiceCleaningBox>
       <Container>
@@ -22,9 +31,9 @@ const ServiceCleaning = () => {
         </Description>
         <ServiceCleaningIconsBox>
           <Icons>
-            <Icon />
-            <Icon />
-            <Icon />
+            {icons.map(({ icon, title, count }, index) => (
+              <Icon icon={icon} title={title} count={count} key={index} />
+            ))}
           </Icons>
         </ServiceCleaningIconsBox>
       </Container>

@@ -13,7 +13,6 @@ import Button from './Button';
 
 const ServiceWorks = () => {
   const [cardsArr, setCardsArr] = useState([]);
-  console.log(cardsArr);
 
   useEffect(() => {
     fetch('db/db.json')
