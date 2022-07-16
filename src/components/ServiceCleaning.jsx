@@ -47,9 +47,12 @@ const ServiceCleaning = () => {
   );
 };
 
-const ServiceCleaningBox = styled.div`
+const ServiceCleaningBox = styled.section`
   min-height: 2000px;
   padding-top: ${rem(240)};
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    padding-top: ${rem(120)};
+  }
 `;
 
 const ServiceCleaningIconsBox = styled.div`
@@ -60,6 +63,9 @@ const ServiceCleaningIconsBox = styled.div`
 
 const ServiceCleaningVideoBox = styled.div`
   margin-bottom: ${rem(240)};
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    margin-bottom: ${rem(120)};
+  }
 `;
 
 export default ServiceCleaning;

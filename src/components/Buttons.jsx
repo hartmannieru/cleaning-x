@@ -16,6 +16,9 @@ const ButtonsContainer = styled.div`
   justify-content: ${(props) => props.justifyContent};
   gap: ${rem(28)};
   margin-bottom: ${(props) => rem(props.mb)};
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    margin-bottom: ${(props) => rem(props.mb / 2)};
+  }
 `;
 
 export default Buttons;

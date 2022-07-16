@@ -53,6 +53,9 @@ const HeaderBoxInner = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(${rem(400)}, auto));
   align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const HeaderContentBox = styled.div`
