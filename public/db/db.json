@@ -18,5 +18,42 @@
       "title": "Get your house cleaned",
       "description": "Nunc maecenas sollicitudin metus tellus mattis sed porttitor cursus eleifend."
     }
+  ],
+  "serviceCleaning": [
+    {
+      "icon": "images/icons/icon-1.svg",
+      "title": "clients",
+      "count": "3,480+"
+    },
+    {
+      "icon": "images/icons/icon-2.svg",
+      "title": "Jobs done",
+      "count": "12,540+"
+    },
+    {
+      "icon": "images/icons/icon-3.svg",
+      "title": "Employees",
+      "count": "100+"
+    }
+  ],
+  "cardsProfessional": [
+    {
+      "id": 1,
+      "img": "/images/professional/item-1.webp",
+      "title": "House cleaning",
+      "description": "Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est."
+    },
+    {
+      "id": 2,
+      "img": "/images/professional/item-2.webp",
+      "title": "Office cleaning",
+      "description": "Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est."
+    },
+    {
+      "id": 3,
+      "img": "/images/professional/item-3.webp",
+      "title": "Industrial cleaning",
+      "description": "Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est."
+    }
   ]
 }

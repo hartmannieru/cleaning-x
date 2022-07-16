@@ -1,8 +1,8 @@
 import React from 'react';
-import Container from 'src/components/Container';
+import Header from 'src/components/Header';
+import LookProfessional from 'src/components/LookProfessional';
 import ServiceCleaning from 'src/components/ServiceCleaning';
-import Header from '../components/Header';
-import ServiceWorks from '../components/ServiceWorks';
+import ServiceWorks from 'src/components/ServiceWorks';
 
 
 const Home = () => {
@@ -11,6 +11,7 @@ const Home = () => {
       <Header />
       <ServiceWorks />
       <ServiceCleaning />
+      <LookProfessional />
     </>
   );
 };

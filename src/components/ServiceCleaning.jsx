@@ -6,11 +6,23 @@ import H2 from './H2';
 import Description from './Description';
 import Icons from './Icons';
 import Icon from './Icon';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import Video from './Video';
+import Hr from './Hr';
 
 const ServiceCleaning = () => {
+  const [icons, setIcons] = useState([]);
+
+  useEffect(() => {
+    fetch('db/db.json')
+      .then((response) => response.json())
+      .then((json) => setIcons(json['serviceCleaning']));
+  }, []);
   return (
     <ServiceCleaningBox>
       <Container>
+        // TODO: убрать br и сделать максимальную ширину
         <H2 align="center" mb={13}>
           Our cleaning services have
           <br />
@@ -22,24 +34,38 @@ const ServiceCleaning = () => {
         </Description>
         <ServiceCleaningIconsBox>
           <Icons>
-            <Icon />
-            <Icon />
-            <Icon />
+            {icons.map(({ icon, title, count }, index) => (
+              <Icon icon={icon} title={title} count={count} key={index} />
+            ))}
           </Icons>
         </ServiceCleaningIconsBox>
+        <ServiceCleaningVideoBox>
+          <Video position={'0 auto'} />
+        </ServiceCleaningVideoBox>
+        <Hr />
       </Container>
     </ServiceCleaningBox>
   );
 };
 
-const ServiceCleaningBox = styled.div`
-  min-height: 2000px;
+const ServiceCleaningBox = styled.section`
   padding-top: ${rem(240)};
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    padding-top: ${rem(120)};
+  }
 `;
 
 const ServiceCleaningIconsBox = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: ${rem(40)};
+`;
+
+const ServiceCleaningVideoBox = styled.div`
+  margin-bottom: ${rem(240)};
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    margin-bottom: ${rem(120)};
+  }
 `;
 
 export default ServiceCleaning;

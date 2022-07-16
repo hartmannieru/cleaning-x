@@ -4,25 +4,27 @@ import { rem } from 'polished';
 import H4 from './H4';
 import Description from './Description';
 
-const CardProfessional = ({ page }) => {
+const CardProfessional = ({
+  img = '/images/professional/item-1.webp',
+  title,
+  description,
+  page,
+}) => {
   return (
     <CardProfessionalContainer page={page}>
       <CardProfessionalImgContainer>
-        <CardProfessionalImg src={'/images/professional/item-1.webp'} alt="Img" />
+        <CardProfessionalImg src={img} alt={title} />
       </CardProfessionalImgContainer>
       <H4 align="center" mb={13}>
-        House cleaning
+        {title}
       </H4>
-      <Description align="center">
-        Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis
-        volutpat est.
-      </Description>
+      <Description align="center">{description}</Description>
     </CardProfessionalContainer>
   );
 };
 
 const CardProfessionalContainer = styled.article`
-  padding: ${rem(83)} ${rem(50)} ${rem(29)};
+  padding: ${rem(49)} ${rem(50)} ${rem(29)};
   border: ${rem(1)} solid ${(props) => props.theme.color.grey};
   box-shadow: 0 ${rem(2)} ${rem(6)} rgba(20, 20, 43, 0.04);
   border-radius: ${rem(16)};
@@ -33,12 +35,15 @@ const CardProfessionalContainer = styled.article`
 const CardProfessionalImgContainer = styled.div`
   display: flex;
   margin: 0 auto;
-  max-width: ${rem(220)};
+  width: ${rem(220)};
+  height: ${rem(224)};
   margin-bottom: ${rem(24)};
 `;
 
 const CardProfessionalImg = styled.img`
   width: 100%;
+  object-fit: contain;
+  margin-top: auto;
 `;
 
 export default CardProfessional;

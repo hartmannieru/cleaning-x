@@ -15,6 +15,7 @@ import Menu from '../components/Menu';
 import styled from 'styled-components';
 import { rem } from 'polished';
 import Container from 'src/components/Container';
+import Video from 'src/components/Video';
 
 const Components = () => {
   return (
@@ -49,6 +50,10 @@ const Components = () => {
       <ComponentsRow>
         <ComponentsLabel>Icons + Text</ComponentsLabel>
         <Icon img={'/images/icons/icon-2.svg'} />
+      </ComponentsRow>
+      <ComponentsRow>
+        <ComponentsLabel>Video</ComponentsLabel>
+        <Video />
       </ComponentsRow>
       <ComponentsRow>
         <ComponentsLabel>Card Works</ComponentsLabel>

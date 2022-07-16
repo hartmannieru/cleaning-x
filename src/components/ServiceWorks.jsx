@@ -13,7 +13,6 @@ import Button from './Button';
 
 const ServiceWorks = () => {
   const [cardsArr, setCardsArr] = useState([]);
-  console.log(cardsArr);
 
   useEffect(() => {
     fetch('db/db.json')
@@ -36,7 +35,7 @@ const ServiceWorks = () => {
             <CardWorks key={id} id={id} img={img} title={title} description={description} />
           ))}
         </ServiceWorksCards>
-        <Buttons mb={240}>
+        <Buttons mb={240} justifyContent={'center'}>
           <Button>Get a free quote</Button>
           <Button full={false}>Explore services</Button>
         </Buttons>

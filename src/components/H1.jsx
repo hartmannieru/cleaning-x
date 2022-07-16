@@ -12,7 +12,7 @@ const H1Container = styled.h1`
   line-height: 109%;
   color: ${(props) => props.theme.color.black};
   margin-bottom: ${(props) => `${props.mb}px`};
-  @media (max-width: 542px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     font-size: ${rem(48)};
   }
 `;

@@ -12,8 +12,7 @@ const CartCountContainer = styled.span`
   color: ${(props) => props.theme.color.black};
   flex-shrink: 0;
   margin-right: ${(props) => rem(props.mr)};
-  // TODO: в переменную
-  @media (max-width: 542px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     display: none;
   }
 `;

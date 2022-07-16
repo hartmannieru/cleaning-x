@@ -27,7 +27,7 @@ const Menu = () => {
 
 const MenuContainer = styled.ul`
   display: flex;
-  @media (max-width: 973px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     display: none;
   }
 `;
