@@ -1,33 +1,28 @@
-import React from 'react'
-import styled from 'styled-components'
-import { rem } from 'polished'
+import React from 'react';
+import styled from 'styled-components';
+import { rem } from 'polished';
 
-const H2 = ({children, align, mb = 0}) => {
+const H2 = ({ children, align, mb = 0 }) => {
   return (
-    <H2Container
-      align={align}
-      mb={mb}
-    >
+    <H2Box align={align} mb={mb}>
       {children}
-    </H2Container>
-  )
-}
+    </H2Box>
+  );
+};
 
-const H2Container = styled.h2`
+export const H2Box = styled.h2`
   font-weight: 700;
   font-size: ${rem(48)};
   line-height: 121%;
-  color: ${props => props.theme.color.black};
-  margin-bottom: ${props => rem(props.mb)};
-  ${
-    props => {
-      if (props.align === 'center') {
-        return `
+  color: ${(props) => props.theme.color.black};
+  margin-bottom: ${(props) => rem(props.mb)};
+  ${(props) => {
+    if (props.align === 'center') {
+      return `
           text-align: center;
-        `
-      }
+        `;
     }
-  }
-`
+  }}
+`;
 
-export default H2
+export default H2;
