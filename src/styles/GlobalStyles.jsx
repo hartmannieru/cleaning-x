@@ -9,8 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 16px;
-    // TODO: в переменную 
-    @media (max-width: 542px) {
+    @media (max-width: 576px) {
       font-size: 12px;
     }
   }

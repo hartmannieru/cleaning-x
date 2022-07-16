@@ -7,16 +7,7 @@ import Home from './pages/Home';
 import Pages from './pages/Pages';
 import Services from './pages/Services';
 import GlobalStyle from './styles/GlobalStyles';
-const theme = {
-  color: {
-    white: '#ffffff',
-    black: '#211F54',
-    primary: '#0075FF',
-    description: '#6E7191',
-    grey: '#EFF0F6',
-    transparent: 'transparent',
-  },
-};
+import theme from './styles/theme';
 
 function App() {
   return (

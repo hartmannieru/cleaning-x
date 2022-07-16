@@ -44,7 +44,7 @@ const Header = () => {
 const HeaderBox = styled.header`
   margin-bottom: ${rem(235)};
   overflow: hidden;
-  @media (max-width: 859px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
     margin-bottom: ${rem(130)};
   }
 `;
@@ -59,7 +59,7 @@ const HeaderContentBox = styled.div`
   margin-top: ${rem(85)};
   flex-shrink: 0;
   flex-grow: 1;
-  @media (max-width: 859px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
     margin-bottom: ${rem(34)};
     margin-top: ${rem(34)};
   }
@@ -76,14 +76,14 @@ const HeaderImgBox = styled.div`
   margin-right: ${rem(-110)};
   flex-shrink: 0;
   flex-grow: 1;
-  @media (max-width: 859px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
     margin-right: 0;
     width: 100%;
   }
 `;
 
 const HeaderImgInner = styled.img`
-  @media (max-width: 859px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
     width: 100%;
   }
 `;

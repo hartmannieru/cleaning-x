@@ -8,6 +8,8 @@ import Icons from './Icons';
 import Icon from './Icon';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Video from './Video';
+import Hr from './Hr';
 
 const ServiceCleaning = () => {
   const [icons, setIcons] = useState([]);
@@ -36,6 +38,10 @@ const ServiceCleaning = () => {
             ))}
           </Icons>
         </ServiceCleaningIconsBox>
+        <ServiceCleaningVideoBox>
+          <Video position={'0 auto'} />
+        </ServiceCleaningVideoBox>
+        <Hr />
       </Container>
     </ServiceCleaningBox>
   );
@@ -49,6 +55,11 @@ const ServiceCleaningBox = styled.div`
 const ServiceCleaningIconsBox = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: ${rem(40)};
+`;
+
+const ServiceCleaningVideoBox = styled.div`
+  margin-bottom: ${rem(240)};
 `;
 
 export default ServiceCleaning;
