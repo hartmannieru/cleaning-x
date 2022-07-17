@@ -60,8 +60,7 @@ const FollowContent = styled.div`
   max-width: ${rem(700)};
   width: 100%;
   @media (max-width: ${(props) => props.theme.breakpoints.xxl}) {
-    padding: ${rem(50)};
-    padding-bottom: 0;
+    padding: ${rem(50)} ${rem(30)} 0;
     max-width: 100%;
   }
 `;
