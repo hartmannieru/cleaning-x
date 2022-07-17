@@ -14,7 +14,9 @@ const Follow = () => {
           <FollowImg src={'images/follow.svg'} alt={'follow'} />
           <FollowContent>
             <FollowMiniTitle>Covid-19 sanitization</FollowMiniTitle>
-            <FollowTitle>We follow guidelines to keep you safe from the COVID-19 virus</FollowTitle>
+            <FollowTitle>
+              We&nbsp;follow guidelines to&nbsp;keep you safe from the COVID-19 virus
+            </FollowTitle>
             <FollowDescription>
               Lobortis mattis odio leo eget mauris met aliquet semper molestie sollicitudin congue
               massa mauris lectus.
@@ -27,41 +29,53 @@ const Follow = () => {
   );
 };
 
-const FollowBox = styled.section`
-  height: 2000px;
-  @media (max-width: ${(props) => props.theme.breakpoints.xxl}) {
-    display: none;
-  }
-`;
+const FollowBox = styled.section``;
 
 const FollowInner = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(${rem(556)}, auto));
+  display: flex;
   align-items: center;
   background: #211f54;
   border-radius: ${rem(24)};
   overflow: hidden;
+  @media (max-width: ${(props) => props.theme.breakpoints.xxl}) {
+    flex-wrap: wrap;
+  }
 `;
 
 const FollowImg = styled.img`
+  max-width: ${rem(518)};
+  width: 100%;
+  align-self: flex-end;
   @media (max-width: ${(props) => props.theme.breakpoints.xxl}) {
     order: 1;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top center;
   }
 `;
 
 const FollowContent = styled.div`
-  padding: 0 ${rem(72)};
-  flex-shrink: 0;
-  flex-grow: 1;
+  padding: ${rem(138)} ${rem(72)};
+  max-width: ${rem(700)};
+  width: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.xxl}) {
+    padding: ${rem(50)};
+    padding-bottom: 0;
+    max-width: 100%;
+  }
 `;
+
 const FollowMiniTitle = styled.div`
   color: ${(props) => props.theme.color.white};
   margin-bottom: ${rem(17)};
 `;
+
 const FollowTitle = styled(H2Box)`
   color: ${(props) => props.theme.color.white};
   margin-bottom: ${rem(18)};
 `;
+
 const FollowDescription = styled(DescriptionBox)`
   color: ${(props) => props.theme.color.white};
   margin-bottom: ${rem(12)};
