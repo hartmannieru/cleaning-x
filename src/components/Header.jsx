@@ -6,6 +6,7 @@ import Description from './Description';
 import Button from './Button';
 import Icon from './Icon';
 import Container from './Container';
+import ButtonAndPhone from './ButtonAndPhone';
 
 const Header = () => {
   return (
@@ -22,15 +23,7 @@ const Header = () => {
               Condimentum mauris sit cursus amet id non neque pharetra nulla ornare sed facilisis
               senectus dapibus nibh ultrices eget suscipit aliquet et nulla magna lacus penatibus.
             </Description>
-            <HeaderAction>
-              <Button>Get a free quote</Button>
-              <Icon
-                img={'images/icons/icon-2.svg'}
-                title="Call us now"
-                description="(414) 567 - 2109"
-                tel="tel:4145672109"
-              />
-            </HeaderAction>
+            <ButtonAndPhone />
           </HeaderContentBox>
           <HeaderImgBox>
             <HeaderImgInner src={'/images/header/header-img.svg'} alt="header-img" />
@@ -66,13 +59,6 @@ const HeaderContentBox = styled.div`
     margin-bottom: ${rem(34)};
     margin-top: ${rem(34)};
   }
-`;
-
-const HeaderAction = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: ${rem(28)};
 `;
 
 const HeaderImgBox = styled.div`

@@ -11,6 +11,7 @@ const theme = {
     sm: '576px',
     lg: '900px',
     xl: '1024px',
+    xxl: '1200px',
   },
 };
 

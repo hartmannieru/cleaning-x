@@ -7,6 +7,7 @@ const Icon = ({
   title = 'clients',
   count = '3,480+',
   tel = false,
+  color = 'black',
 }) => {
   return (
     <IconContainer>
@@ -14,11 +15,11 @@ const Icon = ({
         <IconIcon src={icon} alt="Icon" />
       </IconIconContainer>
       <IconTextContainer>
-        <IconTitle>{title}</IconTitle>
-        <IconDescription>
+        <IconTitle color={color}>{title}</IconTitle>
+        <IconDescription color={color}>
           {tel ? (
-            <IconLink href={tel} rel="noopener noreferrer">
-              {count}
+            <IconLink href={tel} rel="noopener noreferrer" color={color}>
+              (414) 567 - 2109
             </IconLink>
           ) : (
             count
@@ -57,7 +58,8 @@ const IconTitle = styled.h5`
   line-height: 112%;
   letter-spacing: ${rem(1.6)};
   text-transform: uppercase;
-  color: ${(props) => props.theme.color.description};
+  color: ${(props) =>
+    props.color === 'white' ? props.theme.color.white : props.theme.color.description};
   margin-bottom: ${rem(4)};
 `;
 
@@ -72,7 +74,8 @@ const IconLink = styled.a`
   font-weight: 700;
   font-size: ${rem(28)};
   line-height: 129%;
-  color: ${(props) => props.theme.color.black};
+  color: ${(props) =>
+    props.color === 'white' ? props.theme.color.white : props.theme.color.black};
 `;
 
 export default Icon;
