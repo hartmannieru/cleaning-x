@@ -65,10 +65,6 @@ const HeaderImgBox = styled.div`
   margin-right: ${rem(-110)};
   flex-shrink: 0;
   flex-grow: 1;
-  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    margin-right: 0;
-    width: 100%;
-  }
 `;
 
 const HeaderImgInner = styled.img`
