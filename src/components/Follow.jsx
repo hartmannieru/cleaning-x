@@ -29,7 +29,12 @@ const Follow = () => {
   );
 };
 
-const FollowBox = styled.section``;
+const FollowBox = styled.section`
+  margin-bottom: ${rem(200)};
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    padding: ${rem(100)} 0;
+  }
+`;
 
 const FollowInner = styled.div`
   display: flex;

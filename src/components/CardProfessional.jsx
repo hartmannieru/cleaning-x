@@ -6,8 +6,8 @@ import Description from './Description';
 
 const CardProfessional = ({
   img = '/images/professional/item-1.webp',
-  title,
-  description,
+  title = 'House cleaning',
+  description = 'Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est.',
   page,
 }) => {
   return (
