@@ -2,6 +2,7 @@ import React from 'react';
 import Follow from 'src/components/Follow';
 import Header from 'src/components/Header';
 import LookProfessional from 'src/components/LookProfessional';
+import Office from 'src/components/Office';
 import ServiceCleaning from 'src/components/ServiceCleaning';
 import ServiceWorks from 'src/components/ServiceWorks';
 
@@ -13,6 +14,7 @@ const Home = () => {
       <ServiceCleaning />
       <LookProfessional />
       <Follow />
+      <Office />
     </>
   );
 };

@@ -32,7 +32,7 @@ const Follow = () => {
 const FollowBox = styled.section`
   margin-bottom: ${rem(200)};
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    padding: ${rem(100)} 0;
+    margin-bottom: ${rem(100)};
   }
 `;
 
@@ -42,18 +42,18 @@ const FollowInner = styled.div`
   background: #211f54;
   border-radius: ${rem(24)};
   overflow: hidden;
-  @media (max-width: ${(props) => props.theme.breakpoints.xxl}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     flex-wrap: wrap;
   }
 `;
 
 const FollowImg = styled.img`
-  max-width: ${rem(518)};
-  width: 100%;
+  width: 43%;
   align-self: flex-end;
-  @media (max-width: ${(props) => props.theme.breakpoints.xxl}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     order: 1;
-    max-width: 100%;
+    max-width: ${rem(518)};
+    width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: top center;
@@ -65,7 +65,9 @@ const FollowContent = styled.div`
   max-width: ${rem(700)};
   width: 100%;
   @media (max-width: ${(props) => props.theme.breakpoints.xxl}) {
-    padding: ${rem(50)} ${rem(30)} 0;
+    padding: ${rem(50)};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     max-width: 100%;
   }
 `;

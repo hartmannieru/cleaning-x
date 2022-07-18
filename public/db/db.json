@@ -55,5 +55,15 @@
       "title": "Industrial cleaning",
       "description": "Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est."
     }
+  ],
+  "officeChecks": [
+    "Bathrooms",
+    "Kitchens",
+    "Living Rooms",
+    "Carpets",
+    "Bedrooms",
+    "Offices",
+    "Businesses",
+    "Windows"
   ]
 }
