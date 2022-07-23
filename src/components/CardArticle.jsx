@@ -5,6 +5,7 @@ import H4 from './H4';
 import Description, { DescriptionBox } from './Description';
 import H5 from './H5';
 import convertDate from 'src/utils/convertDate';
+import Time from './Time';
 
 const CardArticle = ({
   img = 'images/article/item-1.png',
@@ -23,10 +24,7 @@ const CardArticle = ({
           <H4 mb={17}>{title}</H4>
           <CardArticleDescription>{description}</CardArticleDescription>
           <CardArticleTextFooter>
-            {/* TODO: сделать отдельный time компонент */}
-            <H5>
-              <Time datetime="2022-01-28">{convertDate(time)}</Time>
-            </H5>
+            <Time>{convertDate(time)}</Time>
             <CardArticleTextLink href="#">
               <CardArticleIcon src={'/images/arrow-right.svg'} />
             </CardArticleTextLink>
@@ -96,7 +94,6 @@ const CardArticleIcon = styled.img`
   left: ${rem(2)};
 `;
 
-const Time = styled.time``;
 const CardArticleDescription = styled(DescriptionBox)`
   margin-bottom: ${rem(15)};
 `;

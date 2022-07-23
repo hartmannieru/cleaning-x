@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { rem } from 'polished';
 
 const Icon = ({
@@ -63,17 +63,19 @@ const IconTitle = styled.h5`
   margin-bottom: ${rem(4)};
 `;
 
-const IconDescription = styled.h3`
+const fontStyles = css`
   font-weight: 700;
   font-size: ${rem(28)};
   line-height: 129%;
+`;
+
+const IconDescription = styled.h3`
+  ${fontStyles};
   color: ${(props) => props.theme.color.black};
 `;
-// TODO: разобраться как наследовать от h3
+
 const IconLink = styled.a`
-  font-weight: 700;
-  font-size: ${rem(28)};
-  line-height: 129%;
+  ${fontStyles};
   color: ${(props) =>
     props.color === 'white' ? props.theme.color.white : props.theme.color.black};
 `;

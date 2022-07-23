@@ -27,12 +27,10 @@ const VideoCover = styled.div`
   align-items: center;
   justify-content: center;
   height: inherit;
-  // TODO: написать свою функцию
-  aspect-ratio: 506 / 285;
+  aspect-ratio: 1012 / 570;
 `;
 
 const VideoPlay = styled.div`
-  // TODO: написать свою функцию
   width: 19.57%;
   height: 34.74%;
   border-radius: 50%;
