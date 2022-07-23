@@ -16,8 +16,8 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 import Container from 'src/components/Container';
 import Video from 'src/components/Video';
-import Follow from 'src/components/Follow';
 import Check from 'src/components/Check';
+import NumberPlus from 'src/components/NumberPlus';
 
 const Components = () => {
   return (
@@ -36,6 +36,10 @@ const Components = () => {
       <ComponentsRow>
         <ComponentsLabel>Logo</ComponentsLabel>
         <Logo />
+      </ComponentsRow>
+      <ComponentsRow>
+        <ComponentsLabel>Number Plus</ComponentsLabel>
+        <NumberPlus />
       </ComponentsRow>
       <ComponentsRow>
         <ComponentsLabel>Check</ComponentsLabel>

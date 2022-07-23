@@ -44,6 +44,9 @@ const Office = () => {
 
 const OfficeBox = styled.div`
   margin-bottom: ${rem(200)};
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    margin-bottom: ${rem(100)};
+  }
 `;
 
 const OfficeInner = styled.div`

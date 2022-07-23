@@ -1,4 +1,18 @@
 {
+  "numberPlus": [
+    {
+      "count": "10",
+      "description": "Years"
+    },
+    {
+      "count": "5k",
+      "description": "Clients"
+    },
+    {
+      "count": "20k",
+      "description": "Jobs done"
+    }
+  ],
   "serviceWorks": [
     {
       "id": 1,
