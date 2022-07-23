@@ -22,7 +22,7 @@ const ServiceCleaning = () => {
   return (
     <ServiceCleaningBox>
       <Container>
-        // TODO: убрать br и сделать максимальную ширину
+        {/* TODO: убрать br и сделать максимальную ширину */}
         <H2 align="center" mb={13}>
           Our cleaning services have
           <br />

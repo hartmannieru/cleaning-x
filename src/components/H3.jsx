@@ -4,13 +4,13 @@ import { rem } from 'polished';
 
 const H3 = ({ children, align = 'left', mb = 0 }) => {
   return (
-    <H3Container align={align} mb={mb}>
+    <H3Box align={align} mb={mb}>
       {children}
-    </H3Container>
+    </H3Box>
   );
 };
 
-const H3Container = styled.h3`
+export const H3Box = styled.h3`
   font-weight: 700;
   font-size: ${rem(28)};
   line-height: 129%;

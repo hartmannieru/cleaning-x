@@ -20,17 +20,7 @@ const ButtonContainer = styled.button`
   border-radius: ${rem(14)};
   font-size: ${(props) => (props.size === 'large' ? `${rem(18)}` : `${rem(16)}`)};
   line-height: ${rem(18)};
-  ${(props) => {
-    if (props.full && props.size !== 'small') {
-      return `
-          font-weight: 700;
-        `;
-    } else {
-      return `
-          font-weight: 400;
-        `;
-    }
-  }}
+  font-weight: 700;
   font-family: 'Roboto', sans-serif;
   text-align: center;
   padding: ${(props) =>
@@ -44,7 +34,6 @@ const ButtonContainer = styled.button`
     background: #0069e4;
     box-shadow: none;
     transition: background 200ms linear;
-    font-weight: ${(props) => (props.size === 'large' ? 700 : 400)};
   }
 `;
 

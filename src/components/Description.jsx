@@ -4,13 +4,13 @@ import { rem } from 'polished';
 
 const Description = ({ children, align, mb }) => {
   return (
-    <DescriptionContainer align={align} mb={mb}>
+    <DescriptionBox align={align} mb={mb}>
       {children}
-    </DescriptionContainer>
+    </DescriptionBox>
   );
 };
 
-const DescriptionContainer = styled.p`
+export const DescriptionBox = styled.p`
   max-width: ${rem(702)};
   width: 100%;
   font-weight: 400;

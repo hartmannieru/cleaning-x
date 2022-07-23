@@ -35,10 +35,9 @@ const LookProfessional = () => {
 };
 
 const LookProfessionalBox = styled.section`
-  min-height: 2000px;
-  padding-top: ${rem(240)};
+  padding: ${rem(240)} 0;
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    padding-top: ${rem(120)};
+    padding: ${rem(120)} 0;
   }
 `;
 
