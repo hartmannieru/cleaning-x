@@ -35,9 +35,9 @@ const LookProfessional = () => {
 };
 
 const LookProfessionalBox = styled.section`
-  padding: ${rem(240)} 0;
+  padding: ${(props) => rem(props.theme.padding.desktop)} 0;
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    padding: ${rem(120)} 0;
+    padding: ${(props) => rem(props.theme.padding.mobile)} 0;
   }
 `;
 

@@ -28,6 +28,14 @@ const Nav = () => {
 
 const NavBox = styled.nav`
   padding: ${rem(32)} 0;
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    position: fixed;
+    width: 100%;
+    top: ${rem(-1)};
+    left: 0;
+    background: ${(props) => props.theme.color.white};
+    z-index: 10;
+  }
 `;
 
 const NavBoxInner = styled.div`

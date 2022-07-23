@@ -17,7 +17,7 @@ const ButtonsContainer = styled.div`
   gap: ${rem(28)};
   margin-bottom: ${(props) => rem(props.mb)};
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    margin-bottom: ${(props) => rem(props.mb / 2)};
+    margin-bottom: ${(props) => rem(props.mb / 2 - 10)};
   }
 `;
 

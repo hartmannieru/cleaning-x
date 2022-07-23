@@ -56,7 +56,7 @@ const RequestFree = () => {
             <RequestFreeFormField>
               <Textarea />
             </RequestFreeFormField>
-            <Button>Submit message</Button>
+            <Button mobile={true}>Submit message</Button>
           </RequestFreeForm>
         </RequestFreeInner>
       </Container>
@@ -66,9 +66,9 @@ const RequestFree = () => {
 
 const RequestFreeBox = styled.section`
   background: #f7f9fc;
-  padding: ${rem(240)} 0;
+  padding: ${(props) => rem(props.theme.padding.desktop)} 0;
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    padding: ${rem(120)} 0;
+    padding: ${(props) => rem(props.theme.padding.mobile)} 0;
   }
 `;
 
@@ -92,13 +92,14 @@ const RequestFreeForm = styled.div`
   border-radius: ${rem(16)};
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
     width: 100%;
+    padding: ${rem(43)} ${rem(31)};
   }
 `;
 const RequestFreeTitle = styled(H2Box)`
   margin-bottom: ${rem(8)};
 `;
 const RequestFreeDescription = styled(DescriptionBox)`
-  margin-bottom: ${rem(10)};
+  margin-bottom: ${rem(20)};
 `;
 
 const RequestFreeIcon = styled.div`

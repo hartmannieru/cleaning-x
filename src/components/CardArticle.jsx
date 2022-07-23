@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
 import H4 from './H4';
-import Description from './Description';
+import Description, { DescriptionBox } from './Description';
 import H5 from './H5';
 import convertDate from 'src/utils/convertDate';
 
@@ -21,9 +21,9 @@ const CardArticle = ({
       <CardArticleTextWrap>
         <CardArticleTextContainer>
           <H4 mb={17}>{title}</H4>
-          <Description>{description}</Description>
+          <CardArticleDescription>{description}</CardArticleDescription>
           <CardArticleTextFooter>
-            {/* FIXME: сделать отдельный time компонент */}
+            {/* TODO: сделать отдельный time компонент */}
             <H5>
               <Time datetime="2022-01-28">{convertDate(time)}</Time>
             </H5>
@@ -97,5 +97,8 @@ const CardArticleIcon = styled.img`
 `;
 
 const Time = styled.time``;
+const CardArticleDescription = styled(DescriptionBox)`
+  margin-bottom: ${rem(15)};
+`;
 
 export default CardArticle;

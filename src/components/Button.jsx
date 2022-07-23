@@ -2,9 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-const Button = ({ children, full = true, size = 'large' }) => {
+const Button = ({
+  children,
+  full = true,
+  size = 'large',
+  mobile = false,
+  removeButtonMobile = false,
+}) => {
   return (
-    <ButtonContainer full={full} size={size}>
+    <ButtonContainer
+      full={full}
+      size={size}
+      mobile={mobile}
+      removeButtonMobile={removeButtonMobile}>
       {children}
     </ButtonContainer>
   );
@@ -25,7 +35,6 @@ const ButtonContainer = styled.button`
   text-align: center;
   padding: ${(props) =>
     props.size === 'large' ? `${rem(26)} ${rem(42)}` : `${rem(17)} ${rem(27)}`};
-  /* min-width: ${(props) => (props.size === 'large' ? `${rem(217)}` : '100%')}; */
   box-shadow: ${(props) => (props.full ? 'none' : '0px 4px 10px rgba(20, 20, 43, 0.04)')};
   transition: all 0.3s linear;
   cursor: pointer;
@@ -34,6 +43,13 @@ const ButtonContainer = styled.button`
     background: #0069e4;
     box-shadow: none;
     transition: background 200ms linear;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    width: ${(props) => (props.mobile ? '100%' : 'auto')};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    padding: ${(props) => (props.size === 'large' ? `${rem(26)}` : `${rem(17)} ${rem(27)}`)};
+    display: ${(props) => (props.removeButtonMobile ? 'none' : 'block')};
   }
 `;
 

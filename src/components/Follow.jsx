@@ -30,9 +30,10 @@ const Follow = () => {
 };
 
 const FollowBox = styled.section`
-  margin-bottom: ${rem(200)};
+  overflow: hidden;
+  margin-bottom: ${(props) => rem(props.theme.margin.desktop)};
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    margin-bottom: ${rem(100)};
+    margin-bottom: ${(props) => rem(props.theme.margin.mobile)};
   }
 `;
 
@@ -70,6 +71,9 @@ const FollowContent = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     max-width: 100%;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    padding: ${rem(60)} ${rem(30)};
+  }
 `;
 
 const FollowMiniTitle = styled.div`
@@ -84,7 +88,7 @@ const FollowTitle = styled(H2Box)`
 
 const FollowDescription = styled(DescriptionBox)`
   color: ${(props) => props.theme.color.white};
-  margin-bottom: ${rem(12)};
+  margin-bottom: ${rem(32)};
 `;
 
 export default Follow;

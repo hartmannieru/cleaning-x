@@ -13,6 +13,14 @@ const theme = {
     xl: '1024px',
     xxl: '1200px',
   },
+  padding: {
+    desktop: 200,
+    mobile: 90,
+  },
+  margin: {
+    desktop: 200,
+    mobile: 90,
+  },
 };
 
 export default theme;
