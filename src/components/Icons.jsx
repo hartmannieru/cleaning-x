@@ -15,6 +15,10 @@ const IconsBox = styled.div`
     grid-template-columns: repeat(2, 1fr);
     gap: ${rem(50)} ${rem(80)};
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: ${rem(50)} ${rem(45)};
+  }
 `;
 
 export default Icons;

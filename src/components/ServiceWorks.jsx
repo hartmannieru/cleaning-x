@@ -35,7 +35,7 @@ const ServiceWorks = () => {
             <CardWorks key={id} id={id} img={img} title={title} description={description} />
           ))}
         </ServiceWorksCards>
-        <Buttons mb={240} justifyContent={'center'}>
+        <Buttons mb={200} justifyContent={'center'}>
           <Button>Get a free quote</Button>
           <Button full={false}>Explore services</Button>
         </Buttons>

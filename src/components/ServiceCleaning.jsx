@@ -49,9 +49,9 @@ const ServiceCleaning = () => {
 };
 
 const ServiceCleaningBox = styled.section`
-  padding-top: ${rem(240)};
+  padding-top: ${(props) => rem(props.theme.padding.desktop)};
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    padding-top: ${rem(120)};
+    padding-top: ${(props) => rem(props.theme.padding.mobile)};
   }
 `;
 

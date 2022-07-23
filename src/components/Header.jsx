@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 import H1 from './H1';
 import Description from './Description';
-import Button from './Button';
-import Icon from './Icon';
 import Container from './Container';
 import ButtonAndPhone from './ButtonAndPhone';
 
@@ -23,7 +21,7 @@ const Header = () => {
               Condimentum mauris sit cursus amet id non neque pharetra nulla ornare sed facilisis
               senectus dapibus nibh ultrices eget suscipit aliquet et nulla magna lacus penatibus.
             </Description>
-            <ButtonAndPhone />
+            <ButtonAndPhone removeButtonMobile={true} />
           </HeaderContentBox>
           <HeaderImgBox>
             <HeaderImgInner src={'/images/header/header-img.svg'} alt="header-img" />
@@ -35,10 +33,13 @@ const Header = () => {
 };
 
 const HeaderBox = styled.header`
-  margin-bottom: ${rem(235)};
   overflow: hidden;
+  margin-bottom: ${(props) => rem(props.theme.margin.desktop)};
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    margin-bottom: ${rem(130)};
+    margin-bottom: ${(props) => rem(props.theme.margin.mobile)};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    padding-top: ${rem(89)};
   }
 `;
 

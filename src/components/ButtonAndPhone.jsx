@@ -4,10 +4,10 @@ import { rem } from 'polished';
 import Button from './Button';
 import Icon from './Icon';
 
-const ButtonAndPhone = ({ color }) => {
+const ButtonAndPhone = ({ color, removeButtonMobile = false }) => {
   return (
     <ButtonAndPhoneBox>
-      <Button>Get a free quote</Button>
+      <Button removeButtonMobile={removeButtonMobile}>Get a free quote</Button>
       <Icon
         img={'images/icons/icon-2.svg'}
         title="Call us now"
