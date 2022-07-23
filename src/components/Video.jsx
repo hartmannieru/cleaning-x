@@ -15,7 +15,6 @@ const Video = ({ position = '0' }) => {
 const VideoBox = styled.div`
   border-radius: ${rem(53)};
   max-width: ${rem(1012)};
-  /* height: ${rem(570)}; */
   width: 100%;
   margin: ${(props) => props.position};
   background: url('./images/video-cover.svg') no-repeat center center;

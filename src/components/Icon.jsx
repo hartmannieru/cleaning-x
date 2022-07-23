@@ -34,7 +34,6 @@ const IconContainer = styled.div`
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: ${rem(16)};
 `;
 

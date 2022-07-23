@@ -62,9 +62,9 @@ const ServiceCleaningIconsBox = styled.div`
 `;
 
 const ServiceCleaningVideoBox = styled.div`
-  margin-bottom: ${rem(240)};
+  margin-bottom: ${(props) => rem(props.theme.margin.desktop)};
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    margin-bottom: ${rem(120)};
+    margin-bottom: ${(props) => rem(props.theme.margin.mobile)};
   }
 `;
 
