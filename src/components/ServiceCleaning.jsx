@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
 import Container from './Container';
-import H2 from './H2';
+import H2, { H2Box } from './H2';
 import Description from './Description';
 import Icons from './Icons';
 import Icon from './Icon';
@@ -22,12 +22,7 @@ const ServiceCleaning = () => {
   return (
     <ServiceCleaningBox>
       <Container>
-        {/* TODO: убрать br и сделать максимальную ширину */}
-        <H2 align="center" mb={13}>
-          Our cleaning services have
-          <br />
-          no comparison
-        </H2>
+        <ServiceCleaningTitle>Our cleaning services have no comparison</ServiceCleaningTitle>
         <Description align={'center'} mb={32}>
           Lobortis mattis odio leo eget mauris met aliquet semper molestie sollicitudin congue massa
           mauris lectus vitae cras viverra gravida sapien.
@@ -62,10 +57,18 @@ const ServiceCleaningIconsBox = styled.div`
 `;
 
 const ServiceCleaningVideoBox = styled.div`
-  margin-bottom: ${rem(240)};
+  margin-bottom: ${(props) => rem(props.theme.margin.desktop)};
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    margin-bottom: ${rem(120)};
+    margin-bottom: ${(props) => rem(props.theme.margin.mobile)};
   }
+`;
+
+const ServiceCleaningTitle = styled(H2Box)`
+  max-width: ${rem(608)};
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: ${rem(13)};
+  text-align: center;
 `;
 
 export default ServiceCleaning;

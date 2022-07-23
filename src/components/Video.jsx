@@ -15,12 +15,11 @@ const Video = ({ position = '0' }) => {
 const VideoBox = styled.div`
   border-radius: ${rem(53)};
   max-width: ${rem(1012)};
-  /* height: ${rem(570)}; */
   width: 100%;
   margin: ${(props) => props.position};
   background: url('./images/video-cover.svg') no-repeat center center;
   background-size: cover;
-  aspect-ratio: 506 / 285;
+  aspect-ratio: 1012 / 570;
 `;
 
 const VideoCover = styled.div`
@@ -28,12 +27,10 @@ const VideoCover = styled.div`
   align-items: center;
   justify-content: center;
   height: inherit;
-  // TODO: написать свою функцию
-  aspect-ratio: 506 / 285;
+  aspect-ratio: 1012 / 570;
 `;
 
 const VideoPlay = styled.div`
-  // TODO: написать свою функцию
   width: 19.57%;
   height: 34.74%;
   border-radius: 50%;

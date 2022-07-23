@@ -88,6 +88,11 @@ const Components = () => {
 
 const ComponentsRow = styled.div`
   margin-bottom: ${rem(40)};
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    &:first-child {
+      padding-top: ${rem(89)};
+    }
+  }
 `;
 
 const ComponentsLabel = styled.p`

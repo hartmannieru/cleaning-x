@@ -42,7 +42,6 @@ const RequestFree = () => {
           <RequestFreeForm>
             <RequestFreeFormField>
               <Input label="Full name" />
-              {/* TODO: сделать маску и изменить placeholder на формат номера */}
               <Input label="Phone number" />
             </RequestFreeFormField>
             <RequestFreeFormField>
