@@ -83,7 +83,7 @@ const RequestFreeInner = styled.div`
 const RequestFreeInfo = styled.div``;
 
 const RequestFreeForm = styled.div`
-  width: 60%;
+  width: 55%;
   flex-shrink: 0;
   padding: ${rem(85)} ${rem(61)};
   background: ${(props) => props.theme.color.white};
