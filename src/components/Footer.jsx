@@ -66,7 +66,12 @@ const Footer = () => {
   );
 };
 
-const FooterBox = styled.footer``;
+const FooterBox = styled.footer`
+  padding-top: ${rem(157)};
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    padding-top: ${rem(80)};
+  }
+`;
 const FooterInner = styled.div``;
 
 const FooterTop = styled.div`
