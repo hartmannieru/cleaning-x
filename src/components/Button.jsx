@@ -44,7 +44,6 @@ const ButtonContainer = styled.button`
     background: #0069e4;
     box-shadow: none;
     transition: background 200ms linear;
-    font-weight: ${(props) => (props.size === 'large' ? 700 : 400)};
   }
 `;
 

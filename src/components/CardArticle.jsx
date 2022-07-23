@@ -4,26 +4,32 @@ import { rem } from 'polished';
 import H4 from './H4';
 import Description from './Description';
 import H5 from './H5';
+import convertDate from 'src/utils/convertDate';
 
-const CardArticle = ({ page }) => {
+const CardArticle = ({
+  img = 'images/article/item-1.png',
+  title = '8 best vacuum cleaners to clean any mess for your home in 2022',
+  description = 'Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port titor sit males.',
+  time = 'Jan 28, 2022',
+  page,
+}) => {
   return (
     <CardArticleContainer page={page}>
       <CardArticleImgContainer>
-        <CardArticleImg src={'images/article/item-1.png'} alt="Img" />
+        <CardArticleImg src={img} alt="img" />
       </CardArticleImgContainer>
       <CardArticleTextWrap>
         <CardArticleTextContainer>
-          <H4 mb={17}>8 best vacuum cleaners to clean any mess for your home in 2022</H4>
-          <Description>
-            Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port
-            titor sit males.
-          </Description>
+          <H4 mb={17}>{title}</H4>
+          <Description>{description}</Description>
           <CardArticleTextFooter>
             {/* FIXME: сделать отдельный time компонент */}
             <H5>
-              <Time datetime="2022-01-28">Jan 28, 2022</Time>
+              <Time datetime="2022-01-28">{convertDate(time)}</Time>
             </H5>
-            <CardArticleTextLink href="#">&#128064;</CardArticleTextLink>
+            <CardArticleTextLink href="#">
+              <CardArticleIcon src={'/images/arrow-right.svg'} />
+            </CardArticleTextLink>
           </CardArticleTextFooter>
         </CardArticleTextContainer>
       </CardArticleTextWrap>
@@ -54,6 +60,9 @@ const CardArticleTextContainer = styled.section`
   box-shadow: 0 ${rem(2)} ${rem(6)} rgba(20, 20, 43, 0.04);
   border-radius: ${rem(24)};
   background: ${(props) => props.theme.color.white};
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    padding: ${rem(25)};
+  }
 `;
 
 const CardArticleTextFooter = styled.div`
@@ -72,7 +81,19 @@ const CardArticleTextLink = styled.a`
   font-size: ${rem(30)};
   text-decoration: none;
   border-radius: ${rem(10)};
-  transform: scale(-1, 1);
+  transition: background 200ms linear;
+  &:hover {
+    color: ${(props) => props.theme.color.white};
+    background: #0069e4;
+    box-shadow: none;
+    transition: background 200ms linear;
+  }
+`;
+
+const CardArticleIcon = styled.img`
+  width: ${rem(30)};
+  position: relative;
+  left: ${rem(2)};
 `;
 
 const Time = styled.time``;

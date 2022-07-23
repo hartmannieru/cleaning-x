@@ -1,4 +1,5 @@
 import React from 'react';
+import Articles from 'src/components/Articles';
 import Follow from 'src/components/Follow';
 import Header from 'src/components/Header';
 import LookProfessional from 'src/components/LookProfessional';
@@ -17,6 +18,7 @@ const Home = () => {
       <Follow />
       <Office />
       <What />
+      <Articles />
     </>
   );
 };

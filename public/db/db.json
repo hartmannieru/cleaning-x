@@ -1,4 +1,18 @@
 {
+  "articlesCards": [
+    {
+      "img": "/images/article/item-1.png",
+      "title": "8 best vacuum cleaners to clean any mess for your home in 2022",
+      "description": "Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port titor sit males.",
+      "time": 1642839985000
+    },
+    {
+      "img": "/images/article/item-2.png",
+      "title": "How to properly disinfect your phone and other electronics",
+      "description": "Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port titor sit males.",
+      "time": 1644481585000
+    }
+  ],
   "numberPlus": [
     {
       "count": "10",
