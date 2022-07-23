@@ -18,6 +18,7 @@ import Container from 'src/components/Container';
 import Video from 'src/components/Video';
 import Check from 'src/components/Check';
 import NumberPlus from 'src/components/NumberPlus';
+import Input from 'src/components/Input';
 
 const Components = () => {
   return (
@@ -40,6 +41,10 @@ const Components = () => {
       <ComponentsRow>
         <ComponentsLabel>Number Plus</ComponentsLabel>
         <NumberPlus />
+      </ComponentsRow>
+      <ComponentsRow>
+        <ComponentsLabel>Input</ComponentsLabel>
+        <Input />
       </ComponentsRow>
       <ComponentsRow>
         <ComponentsLabel>Check</ComponentsLabel>
