@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-const Input = ({ label = 'Full name' }) => {
+const Input = ({ label = 'Full name', page }) => {
   return (
-    <InputBox>
+    <InputBox page={page}>
       <InputLabel>
         <InputLabelText>{label}</InputLabelText>
         <InputForm />
@@ -14,7 +14,7 @@ const Input = ({ label = 'Full name' }) => {
 };
 
 const InputBox = styled.div`
-  width: 100%;
+  width: ${(props) => (props.page === 'components' ? rem(259) : '100%')};
 `;
 
 const InputLabel = styled.label``;
@@ -31,7 +31,6 @@ const InputForm = styled.input`
   box-shadow: 0 ${rem(2)} ${rem(12)} rgba(20, 20, 43, 0.08);
   border-radius: ${rem(16)};
   height: ${rem(72)};
-  /* min-width: ${rem(259)}; */
   width: 100%;
   padding: ${rem(20)};
   font-size: ${rem(18)};

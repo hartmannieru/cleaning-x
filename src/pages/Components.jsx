@@ -44,7 +44,7 @@ const Components = () => {
       </ComponentsRow>
       <ComponentsRow>
         <ComponentsLabel>Input</ComponentsLabel>
-        <Input />
+        <Input page={'components'} />
       </ComponentsRow>
       <ComponentsRow>
         <ComponentsLabel>Check</ComponentsLabel>
