@@ -42,7 +42,7 @@ const Office = () => {
   );
 };
 
-const OfficeBox = styled.div`
+const OfficeBox = styled.section`
   margin-bottom: ${rem(200)};
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
     margin-bottom: ${rem(100)};

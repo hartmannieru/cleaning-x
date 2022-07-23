@@ -45,7 +45,7 @@ const What = () => {
   );
 };
 
-const WhatBox = styled.div``;
+const WhatBox = styled.section``;
 
 const WhatInner = styled.div`
   display: flex;

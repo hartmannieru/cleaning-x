@@ -1,6 +1,7 @@
 import React from 'react';
 import Articles from 'src/components/Articles';
 import Follow from 'src/components/Follow';
+import Footer from 'src/components/Footer';
 import Header from 'src/components/Header';
 import LookProfessional from 'src/components/LookProfessional';
 import Office from 'src/components/Office';
@@ -21,6 +22,7 @@ const Home = () => {
       <What />
       <Articles />
       <RequestFree />
+      <Footer />
     </>
   );
 };
