@@ -2,20 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-const Input = ({ label = 'Full name', placeholder = 'name' }) => {
+const Input = ({ label = 'Full name' }) => {
   return (
     <InputBox>
       <InputLabel>
         <InputLabelText>{label}</InputLabelText>
-        <InputForm placeholder={placeholder} />
+        <InputForm />
       </InputLabel>
     </InputBox>
   );
 };
 
-const InputBox = styled.div``;
+const InputBox = styled.div`
+  width: 100%;
+`;
+
 const InputLabel = styled.label``;
-const InputLabelText = styled.p`
+export const InputLabelText = styled.p`
   font-weight: 400;
   font-size: ${rem(18)};
   line-height: 167%;
@@ -24,11 +27,12 @@ const InputLabelText = styled.p`
 `;
 const InputForm = styled.input`
   background: #ffffff;
-  border: 1px solid #eff0f6;
-  box-shadow: 0px 2px 12px rgba(20, 20, 43, 0.08);
-  border-radius: 16px;
+  border: ${rem(1)} solid #eff0f6;
+  box-shadow: 0 ${rem(2)} ${rem(12)} rgba(20, 20, 43, 0.08);
+  border-radius: ${rem(16)};
   height: ${rem(72)};
-  min-width: ${rem(259)};
+  /* min-width: ${rem(259)}; */
+  width: 100%;
   padding: ${rem(20)};
   font-size: ${rem(18)};
   line-height: 167%;
