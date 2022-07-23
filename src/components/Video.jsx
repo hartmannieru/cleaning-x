@@ -19,7 +19,7 @@ const VideoBox = styled.div`
   margin: ${(props) => props.position};
   background: url('./images/video-cover.svg') no-repeat center center;
   background-size: cover;
-  aspect-ratio: 506 / 285;
+  aspect-ratio: 1012 / 570;
 `;
 
 const VideoCover = styled.div`
